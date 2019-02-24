@@ -1,0 +1,288 @@
+.fmlabelright {
+  color: #007DC5;
+  padding-left: 0px;
+  padding-right: 10px;
+  padding-top: 2px;
+  font-weight: 600;
+  text-align: right;
+}
+
+.fld {
+  text-align: left;
+  font-weight: 400;
+  color: #000000;
+}
+
+.panel-heading {
+  padding-bottom: 40px;
+  font-size: 14px;
+  color: #58595b;
+  font-weight: 600;
+}
+
+.panel-primary {
+  border-color: lightgray;
+  padding-bottom: 20px;
+}
+
+.panel-primary > .panel-heading {
+  color: #007DC5;
+  background-color: transparent;
+  border-color: transparent;
+  font-weight: 700;
+}
+
+table {
+  width: 100%;
+  padding: 200px;
+}
+
+td {
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+
+td, th {
+  text-align: left;
+  padding-left: 15px;
+  padding-right: 0px;
+  padding-top: 0px;
+  color: #007dc5;
+}
+
+tr.mat-footer-row, tr.mat-row {
+  height: 38px;
+}
+
+.mat-elevation-z8 {
+  box-shadow: none;
+}
+
+
+tr:nth-child(even) {
+  background-color: #EAF1F7;
+}
+
+tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+tr.datarow:hover {
+  background-color: #ffff99;
+}
+
+select {
+  height: 24px;
+}
+
+.datatable{
+  width: 100%;
+}
+
+
+.freezertbl th {
+  width: 20%;
+}
+
+
+td[class^="col"], th[class^="col"] {
+  padding-left: 5px;
+}
+
+@media all and (min-width: 767px){
+ 
+
+}
+
+@media all and (max-width: 767px) {
+
+  td[class^="col"], th[class^="col"] {
+    padding-left: 5px;
+  }
+  .col5{
+    display: none;
+  }
+}
+
+
+@media all and (max-width: 579px) {
+
+  .col1 {
+    display: none;
+  }
+  .freezertbl th {
+    width: 25%;
+  }
+}
+
+
+
+
+.col55 {
+  display: none;
+}
+
+tr.mat-header-row {
+  height: 40px;
+}
+
+tr.mat-header-row {
+  padding-bottom: 10px;
+  height: unset;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px RGBA(0,24,48,.2);
+  border: 1px solid #f0f0f0;
+  height:40px;
+}
+
+.btn-primary, .btn-default {
+  background-color: #4dbeee;
+  color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 3px 3px 12px 1px rgba(0,0,0,.2);
+}
+
+.btn-div {
+  padding-right: 10px;
+  padding-left: 0px;
+  width: 100px;
+  float: right;
+}
+
+.container {
+  padding-bottom: 50px;
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 100%;
+  }
+}
+
+.panel-srch {
+  display: block;
+  margin-bottom: 10px;
+  height: 60px;
+}
+
+.btn-default:hover {
+  color: #FFFF00;
+  background-color: #007DC5;
+  border-color: #8c8c8c;
+}
+
+.btn-default[disabled]:hover {
+  background-color: #4dbeee;
+  color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 3px 3px 12px 1px rgba(0,0,0,.2);
+}
+
+.container00 {
+  border-width: 0px;
+  box-shadow: none;
+  margin-bottom: 10px;
+  padding: 10px;
+  padding-top: 0px;
+  margin-top: 0px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-style: solid;
+  border-radius: 5px;
+}
+
+.panel-primary {
+  border-width: 0px;
+  padding-bottom: 20px;
+}
+
+.row {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto
+}
+
+.panel-heading {
+  padding: 10px 15px;
+  border-bottom: 1px solid transparent;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.hdr, .subhdr {
+  padding-right: 0px;
+  padding-left: 0px;
+  padding-bottom: 30px;
+  margin-bottom: 0px;
+  font-weight: 600;
+  font-size: 18px;
+  color: #58595B;
+  display: block;
+  width: 100%;
+  text-align: center;
+
+}
+
+.hdrStep {
+  margin-left: 0px;
+  padding-top: -10px;
+  padding-left: 30px;
+  padding-bottom:20px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 18px;
+  color: #58595B;
+}
+
+.subhdr {
+  padding-bottom: 0px;
+  font-weight: 500;
+}
+
+.prtmsg {
+  text-align: left;
+  font-weight: 400;
+  color: grey;
+  margin-left: -25px;
+}
+
+.fmlabel2 {
+  text-align: left;
+  margin-left: -10px;
+  margin-bottom: 20px;
+  color: #007dc5;
+}
+
+.sidfrm {
+  padding: 5px;
+  margin-top: 0px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #d3d3d3;
+  border-radius: 4px;
+  box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+
+.sidfrm td {
+
+  color: #000000;
+}
+
+.sidfrm th {
+}
+
+.fmlabel2 {
+  text-align: left;
+  margin-left: 0px;
+  margin-bottom: 10px;
+}
+
+.buttons{
+  text-align: right;
+}

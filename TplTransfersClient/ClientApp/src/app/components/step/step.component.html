@@ -1,0 +1,50 @@
+<div id="summary" class="section panel panel-primary">
+  <div>
+    <div *ngIf="resourceLoaded && stageForm" name="section00" class="container00">
+
+
+      <div class="row">
+        <div class="col-sm-12 buttons"><a class="app-component" [routerLink]="['../']" [queryParams]="{donorid: donorId}"><button class="btn btn-default"><span class='glyphicon glyphicon-circle-arrow-left'></span>&nbsp;back</button></a></div>
+        <div class="col-sm-12 hdrStep">Step {{stageForm?.TransferStep}}</div>
+        <div class="col-sm-12 errmsg" [innerHTML]="msg" id="msg"></div>
+      </div>
+        <div name="row1" class="row">
+          <div class="col-sm-12 column">
+            <div class="col-sm-3 fmlabel2">Date / Time of Transfer</div>
+            <div class="col-sm-8 fld">
+              <span>{{stageForm.TransferDate | date:'MMM d, y, h:mm a'}}</span>
+            </div>
+          </div>
+        </div>
+
+      <div name="row2" class="row">
+        <div class="col-sm-12 column">
+          <div class="col-sm-6 fmlabel2">Grafts</div>
+          <div class="sidfrm col-sm-6 column">
+            <table>
+              <thead>
+                <tr>
+                  <th>SID</th>
+                  <th>Part Number</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let graftitem of graftList">
+                  <td>
+                    {{graftitem.SID}}
+                  </td>
+                  <td>
+                    {{siditem.PartNo}}
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+
+
+</div>

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" charset="utf-8">
+  <title>Synergraft</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="assets/faviconfa.ico">
+  <link href="assets/css/external.css" rel="stylesheet">
+  <script type="text/javascript" src="../assets/js/BrowserPrint-2.0.0.75.min.js"></script>
+  <script type="text/javascript">
+    var selected_device;
+    var devices = [];
+
+    function setup() {
+      //Get the default device from the application as a first step. Discovery takes longer to complete.
+      BrowserPrint.getLocalDevices(function (device_list) {
+
+        for (var i = 0; i < device_list.length; i++) {
+          var device = device_list[i];
+          if (device.name == "Zebra Printer A") {
+            // alert(device.name);
+            selected_device = device;
+
+          }
+        }
+      }, function () { alert("Error getting local devices") }, "printer");
+    }
+
+    function writeToSelectedPrinter(dataToWrite) {
+      selected_device.send(dataToWrite, undefined, undefined);
+    }
+
+    window.onload = setup;</script>
+</head>
+<body>
+  <app-root></app-root>
+</body>
+</html>

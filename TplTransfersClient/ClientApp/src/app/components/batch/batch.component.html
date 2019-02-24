@@ -1,0 +1,51 @@
+<div id="summary" class="section panel panel-primary">
+  <div class="panel-heading row" >
+    <form  #thisForm="ngForm">
+      <div >
+        <div *ngIf="resourceLoaded" class="col-sm-12 hdr">Donor {{donorID}}</div>
+        <div class="col-sm-12 errmsg" [innerHTML]="msg" id="msg"></div>
+      </div>
+      <div *ngIf="resourceLoaded" name="section00" class="container00">
+
+        <div class="container">
+          <div class="panel-heading"><span class="subhdr">Transfers</span></div>
+          <table mat-table class="datatable" [dataSource]="(allTransfers)" matSort>
+            <tr>
+              <ng-container matColumnDef="TransferStep">
+                <th *matHeaderCellDef class="tblCellHalf">Transfer Step</th>
+                <td *matCellDef="let item" class="tblCellHalf"><a routerLink="/step/{{item.did}}">{{item.TransferStep}}</a></td>
+              </ng-container>
+              
+              <ng-container matColumnDef="TransferDate">
+                <th *matHeaderCellDef class="tblCellHalf">Transfer Date</th>
+                <td *matCellDef="let item" class="tblCellHalf"><a routerLink="/step/{{item.did}}">{{item.TransferDate | date:'MMM d, y, h:mm a' }}</a></td>
+              </ng-container>
+     
+<tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+
+            <tr class="datarow" mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+          </table>
+        </div>
+        <div name="row21" class="container">
+          
+          <div class="col-sm-8 column">
+            <div class="col-sm-12 fmlabel2">Zebra Text to Printer</div>
+
+            <div class="col-sm-12 fld">
+              <div class="col-sm-12 prtmsg" [innerHTML]="prt" id="prt"></div>
+            </div>
+          </div>
+          <div class="col-sm-4 column">
+            <div class="col-sm-12 fmlabel2">&nbsp;</div>
+            <div class="col-sm-12 fld">
+              <input type="button" class="formbutton" value="Print Label" onclick="writeToSelectedPrinter(document.getElementById('prt').innerHTML)">
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+
+
+</div>

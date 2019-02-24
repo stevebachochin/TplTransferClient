@@ -1,0 +1,14 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a *ngIf="donorId" class="app-component navbar-brand" [routerLink]="['../']" [queryParams]="{donorid: donorId}">
+        <img [src]="appLogo" alt="logo">
+        <span class="app-component appTitle">Transfers</span>
+      </a>
+      <div class="app-component navbar-brand" *ngIf="!donorId">
+        <img [src]="appLogo" alt="logo">
+        <span *ngIf="!donorId" class="app-component appTitle">Transfers</span>
+      </div>
+    </div>
+  </div>
+</nav>
